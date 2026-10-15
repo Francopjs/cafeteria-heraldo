@@ -1,0 +1,33 @@
+html{
+    font-family: sans-serif;
+}
+
+
+body{
+    background-color: rgb(197, 197, 197);
+    color: rgb(90, 45, 0);
+}
+
+header{
+    color: rgb(39, 30, 13);
+    background-color: rgb(209, 167, 85);
+}
+
+footer{
+    color: rgb(41, 25, 0);
+}
+
+article{
+    min-width: 300px;
+    max-width: 500px;
+    background-color: rgb(209, 208, 208);
+    padding: 10px;
+    border: solid 1px rgb(230, 230, 230);
+    border-radius: 8px;
+    margin: 10px;
+}
+
+article img{
+    width: 250px;
+    height: auto;
+}
