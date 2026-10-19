@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html{
     font-family: sans-serif;
 }
@@ -31,7 +36,7 @@ nav ul {
 ul li a{
     color: rgb(53, 36, 0);
     font-size: 0.9em;
-    padding: 10px;
+    padding-right: 10px;
 }
 
 #logo{
@@ -66,3 +71,33 @@ article img{
     background-color: rgb(186, 185, 185);
     border-radius: 10px;
 }
+
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul{
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  nav a{
+    display: inline-block;
+    padding: 10px;
+  }
+
+  article{
+    width: 100%;
+    max-width: none;
+  }
+}
+
