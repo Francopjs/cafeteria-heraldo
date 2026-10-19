@@ -1,3 +1,14 @@
+:root{
+    --marronOscuro: rgb(53, 36, 0);
+    --amarilloFondo: rgb(209, 167, 85);
+    --grisFondo: rgb(197, 197, 197);
+    --borderCard: rgb(230, 230, 230);
+    --grisCards: rgb(209, 208, 208);
+    --grisContenedorCards: rgb(186, 185, 185);
+    --hoverLinks: rgb(249, 200, 108);
+    --Shadow: rgb(74, 74, 74);
+}
+
 *{
     padding: 0;
     box-sizing: border-box;
@@ -9,13 +20,12 @@ html{
 
 
 body{
-    background-color: rgb(197, 197, 197);
-    color: rgb(90, 45, 0);
+    background-color: var(--grisFondo);
+    color: var(--marronOscuro);
 }
 
 header{
-    color: rgb(39, 30, 13);
-    background-color: rgb(209, 167, 85);
+    background-color: var(--amarilloFondo);
     padding: 5px;
 }
 
@@ -26,6 +36,11 @@ nav{
     padding: 10px;
 }
 
+nav a{
+    display: inline-block;
+    padding: 10px;
+  }
+
 nav ul {
     display: flex;
     justify-content: space-around;
@@ -34,9 +49,14 @@ nav ul {
 }
 
 ul li a{
-    color: rgb(53, 36, 0);
+    color: var(--marronOscuro);
     font-size: 0.9em;
     padding-right: 10px;
+}
+
+ul li a:hover{
+    background-color: var(--hoverLinks);
+    border-radius: 8px;
 }
 
 #logo{
@@ -45,17 +65,20 @@ ul li a{
 }
 
 footer{
-    color: rgb(41, 25, 0);
+    color: var(--marronOscuro);
 }
 
 article{
-    min-width: 50px;
-    max-width: 250px;
-    background-color: rgb(209, 208, 208);
+    background-color: var(--grisCards);
     padding: 10px;
-    border: solid 1px rgb(230, 230, 230);
+    border: 1px solid var(--borderCard);
     border-radius: 8px;
-    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover{
+    box-shadow: 1px 1px 5px var(--Shadow);
+    transform: translateY(-10px);
 }
 
 article img{
@@ -65,11 +88,16 @@ article img{
 }
 
 .contenedor-cards{
-    display: flex;
+    /*display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: rgb(186, 185, 185);
+    */
+    background-color: var(--grisContenedorCards);
     border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 10px;
 }
 
 main{
@@ -88,16 +116,6 @@ main{
     justify-content: space-between;
     gap: 10px;
     flex-wrap: wrap;
-  }
-
-  nav a{
-    display: inline-block;
-    padding: 10px;
-  }
-
-  article{
-    width: 100%;
-    max-width: none;
   }
 }
 
