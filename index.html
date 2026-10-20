@@ -14,7 +14,8 @@
             <li><a href="#QuienesSomos">Nosotros</a></li>
             <li><a href="#Pasteleria">Pasteleria</a></li>    
             <li><a href="#Cafeteria">Cafeteria</a></li>
-            <li><a href="#Contacto">Contacto</a></li>    
+            <li><a href="#Contacto">Contacto</a></li>  
+            <li><a href="#Reservas">Reservas</a></li>    
         </ul>
     </nav>
 </header>
@@ -50,13 +51,13 @@
             <p>$ 250</p>
         </article>
         <article>
-            <img src="./img/alfajor-pistaccio.jpeg">
+            <img src="./img/alfajor-pistaccio.jpeg" alt="alfajor de pistaccio">
             <h3>Alfajor de Pistacho</h3>
             <p>Alfajor de corteza blanca, relleno de pistacho y dulce de leche.</p>
             <p>$ 350</p>
         </article>
         <article>
-            <img src="./img/flan-casero.jpg">
+            <img src="./img/flan-casero.jpg" alt="budin de pan casero">
             <h3>Budin de Pan</h3>
             <p>Leche, caramelo, pan y azucar.</p>
             <p>$ 450</p>
@@ -67,7 +68,7 @@
         <h2>Cafeteria</h2>
         <div class="contenedor-cards">
         <article>
-            <img src="./img/cortado.avif" alt="cafe cortado">
+            <img src="./img/cortado.avif" alt="cafe negro con un poquito de leche">
             <h3>Cortado</h3>
             <p>Mitad cafe mitad leche</p>
             <p>$ 25</p>
@@ -86,6 +87,42 @@
         </article>
         </div>
     </section>
+    
+    <section id="Reservas">
+        <h2>Reservas</h2>
+        
+        <form class="formulario">
+
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" required name="nombre">
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="ejemplo@gmail.com" required name="email">
+        
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="+54 9 223 123-4567" required>
+
+        <label for="fecha">Fecha</label>
+        <input id="fecha" type="date" required name="fecha">
+
+        <label for="cantidadPersonas">Cantidad de Personas</label>
+        <input id="cantidadPersonas" type="number" required name="cantidad-personas" min="1" max="10" value="2">
+
+        
+        <label for="horario">Elegí el horario</label>
+        <select name="horario" id="horario">
+            <option value="primer-turno" selected>Primer Turno: 20:30 - 22:00</option>
+            <option value="segundo-turno">Segundo Turno: 22:00 - 23:00</option>
+            <option value="tercer-turno">Tercer Turno: 23:00 - 00:00</option>
+        </select>
+
+        <label for="comentarios">Dejanos alguna información extra</label>
+        <textarea name="comentarios" id="comentarios" rows="10" cols="50" placeholder="cliente celiaco, estacionamiento, etc."></textarea>
+
+        <button type="submit">Enviar</button>
+    
+        </form>
+    </section>
 </main>
 
 <footer id="Contacto">
@@ -96,14 +133,19 @@
 </address>
 <h2>Horarios</h2>
 <ul>
-    <li>Lunes: 09:00 a 18:00</li>
-    <li> Martes: 09:00 a 18:00</li>
-    <li>Miercoles: 09:00 a 18:00</li>
-    <li>Jueves: 09:00 a 18:00</li>
-    <li>Viernes: 09:00 a 18:00</li>
-    <li>Sabado: 09:00 a 14:00</li>
+    <li>Lunes: 20:30 a 00:00</li>
+    <li> Martes: 20:30 a 00:00</li>
+    <li>Miercoles: 20:30 a 00:00</li>
+    <li>Jueves: 20:30 a 00:00</li>
+    <li>Viernes: 20:30 a 00:00</li>
+    <li>Sabado: 20:30 a 00:00</li>
     <li>Domingo: Cerrado</li>
 </ul>
+
+
+
+
+
 </footer>
 
 </body>

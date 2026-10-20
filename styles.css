@@ -7,7 +7,9 @@
     --grisContenedorCards: rgb(186, 185, 185);
     --hoverLinks: rgb(249, 200, 108);
     --Shadow: rgb(74, 74, 74);
-}
+    --HoverBotones: rgb(66, 39, 1);
+    }
+
 
 *{
     padding: 0;
@@ -51,7 +53,6 @@ nav ul {
 ul li a{
     color: var(--marronOscuro);
     font-size: 0.9em;
-    padding-right: 10px;
 }
 
 ul li a:hover{
@@ -105,6 +106,48 @@ main{
     margin: 0 auto;
 }
 
+.formulario {
+    background-color: var(--grisContenedorCards);
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+input, select, textarea, button{
+    width:100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid var(--borderCard);
+    height: 32px;
+    padding: 5px;
+    margin-top: 10px;
+    font-family: inherit;
+}
+
+label{
+    font-size: 14px;
+}
+
+input[type=date]{
+    color: var(--marronOscuro);
+}
+
+textarea{
+    height: 100px;
+}
+
+button{
+    background-color: var(--amarilloFondo);
+    transition: 0.3s ease;
+}
+
+button:hover{
+    background-color: var(--HoverBotones);
+    color: white;
+}
+
+
 
 @media (max-width: 600px) {
   nav {
@@ -118,4 +161,3 @@ main{
     flex-wrap: wrap;
   }
 }
-
